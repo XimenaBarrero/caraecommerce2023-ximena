@@ -7,6 +7,8 @@
 :root {
     --dark-color: rgb(34, 34, 34);
     --green:rgb(70, 91, 82);
+    --light-color:rgb(227, 230, 243);
+    --light-blue:rgb(8, 129, 120);
   }
 
 h1{
@@ -50,4 +52,53 @@ body{
 }
 
 /*HEADER START*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color:var(--light-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
 
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar > li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar > li > a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--dark-color);
+    transition: 0.3s ease;
+}
+
+#navbar > li > a:hover,
+#navbar > li > a.active{
+    color: var(--light-blue);
+}
+
+#navbar > li > a.active::after,
+#navbar > li > a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--light-blue);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*HOME PAGE*/
+/*SHOP PAGE*/
+/*SINGLE PRODUCTS*/
+/*BLOG PAGE*/
+/*ABOUT PAGE*/
