@@ -59,6 +59,32 @@ p{
     margin: 40px 0;
 }
 
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
 body{
     width: 100%;
 }
@@ -305,6 +331,48 @@ body{
     color:var(--red)
 }
 
+#banner button:hover{
+    background-color: var(--green-blue);
+    color: var(--light-color);
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../images/banner/b17.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    color: var(--light-color);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2{
+    color: var(--light-color);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color: var(--light-color);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
 
 /*SHOP PAGE*/
 /*SINGLE PRODUCTS*/
