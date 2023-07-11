@@ -21,6 +21,8 @@
     --yellow:rgb(254, 236, 44);
     --light-lightgrey: rgb(232, 246, 234);
     --red:rgb(239, 54, 54);
+    --orange: rgb(249, 158, 21);
+    --dark-blue:rgb(18, 31, 92);
   }
 
 h1{
@@ -73,17 +75,17 @@ button.normal{
 }
 
 button.white {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
-    padding: 15px 30px;
-    color: var(--dark-color);
-    background-color: var(--light-color);
-    border-radius: 4px;
+    padding: 11px 18px;
+    color: var(--light-color);
+    background-color: transparent;
     cursor: pointer;
-    border: none;
+    border: 1px solid var(--light-color);
     outline: none;
     transition: 0.2s;
 }
+
 
 body{
     width: 100%;
@@ -137,6 +139,15 @@ body{
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
 }
 
 /*HOME PAGE*/
@@ -355,6 +366,10 @@ body{
     padding: 30px;
 }
 
+#sm-banner .banner-box2{
+    background-image: url("../images/banner/b10.jpg");
+}
+
 #sm-banner h4{
     color: var(--light-color);
     font-size: 20px;
@@ -374,8 +389,338 @@ body{
     padding-bottom: 15px;
 }
 
+#sm-banner .banner-box:hover button{
+    background: var(--green-blue);
+    border: 1px solid var(--green-blue);
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../images/banner/b7.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+    background-image: url("../images/banner/b4.jpg");
+}
+
+#banner3 .banner-box3{
+    background-image: url("../images/banner/b18.jpg");
+}
+
+#banner3 h2{
+    color: var(--light-color);
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3{
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("../images/banner/b14.png");
+    background-position:20% 30%;
+    background-color: var(--dark-blue);
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--grey);
+}
+
+#newsletter p span{
+    color: var(--yellow);
+}
+
+#newsletter input{
+    height: 3.12rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+}
+
+#newsletter button{
+    background-color: var(--green-blue);
+    color: var(--light-color);
+    white-space: nowrap;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+footer .follow{
+   margin-top: 20px;
+}
+
+footer .follow i{
+    color: var(--grey);
+    padding-right: 4px;
+    cursor: pointer;
+ }
+
+ footer .install .row img{
+    border: 1px solid var(--green-blue);
+    border-radius: 6px;
+ }
+
+ footer .install img{
+    margin:10px 0 15px 0 ;
+ }
+
+ footer .follow i:hover,
+ footer a:hover{
+    color: var(--green-blue);
+ }
+
+ footer .copyright{
+    width: 100%;
+    text-align: center;
+ }
+  
 /*SHOP PAGE*/
 /*SINGLE PRODUCTS*/
 /*BLOG PAGE*/
 /*ABOUT PAGE*/
+/*CART PAGE*/
+
+/*START MEDIA QUERIES*/
+
+@media (max-width:799px){
+
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--light-color);
+        box-shadow: 0 40px 60px var(--dark-color);
+        padding: 80px 0 0 10px;
+        transition:0.3s ;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+    #mobile i{
+        color: var(--dark-color);
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top:30px;
+        left:30px;
+        color: var(--dark-color);
+        font-family: 24px;    
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #hero{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #feature{
+        justify-content: center;
+    }
+
+    #feature .fe-box{
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container{
+        justify-content: center;
+    }
+
+    #product1 .pro{
+        margin: 15px;
+    }
+
+    #banner{
+        height: 30vh;
+    }
+
+    #sm-banner .banner-box{
+        min-width: 100%;
+        height: 30vh;
+    }
+
+    #banner3{
+        padding: 40px;
+    }
+
+    #banner3 .banner-box{
+        width:28% ;
+    }
+
+    #newsletter .form{
+        width:70% ;
+    }
+}
+
+@media (max-width:477px){
+
+    .section-p1{
+        padding: 20px ;
+    }
+
+    #header{
+        padding: 10px 30px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #feature{
+        justify-content: space-between;
+    }
+
+    #feature .fe-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product .pro{
+        width: 100%;
+    }
+
+    #banner{
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box{
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+
+    #banner3{
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box{
+        width: 100%;
+    }
+
+    #newsletter .form{
+        width: 100%;
+    }
+
+    #newsletter{
+        padding: 40px 20px;
+    }
+
+    footer .copyright{
+        text-align: start;
+    }
+}
 
